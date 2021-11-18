@@ -1,0 +1,24 @@
+Project originality and or difficulty (3)
+
+Goal of System (2):
+Clear Description of what IoT system is supposed to achieve
+
+Block Diagram (1):
+Block Diagram (1): Clearly shows relevant components and interactions
+
+Resources Used (2):
+Components
+
+- a
+  Platforms
+- a
+  Protocols
+- a
+  Processing/Visualization Techniques
+- a
+
+Reflection (2):
+Lessons Learned:
+Limitations:
+Insights Gained:
+Possible Remediation

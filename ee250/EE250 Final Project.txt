@@ -1,0 +1,18 @@
+EE250 Final Project
+Kyler Saiki and Sophia Yamashita
+
+Demo: 
+
+
+Compile Instructions:
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+
+External Libraries Used:
