@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Correlations</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    
+    <div class= selectors>
+        <form action="search" class = "search" id="containerelemenet">
+        <div class="form_group">
+            <input type="input" class="form_field2" placeholder="State" name="state" required>
+            <label for="name" class="form_label2">State</label>
+        </div>
+        <div class="form_group">
+            <input type="input" class="form_field" placeholder="Ticker" name="ticker" required>
+            <label for="name" class="form_label">Ticker</label>
+        </div>
+            <input class="submit" type="submit"></input>
+        </form>
+    </div>
+    <div class="titleclass">
+        <h1 class="title">Stock Correlation with State COVID Cases</h1>
+    </div>
+    
+    <div class="container" id="container">
+        <h2>Correlation</h2>
+        <div class="skills">
+            <span class="Name">Pearson</span>
+            <div class="percent">
+                <div class="progress" style="width: {{pearson}}%;"></div>
+            </div>
+            <span class="Value">{{pearson}}%</span>
+        </div>
+        <div class="skills">
+            <span class="Name">Spearman</span>
+            <div class="percent">
+                <div class="progress" style="width: {{spearman}}%;"></div>
+            </div>
+            <span class="Value">{{spearman}}%</span>
+        </div>
+        <div class="skills">
+            <span class="Name">Kendall</span>
+            <div class="percent">
+                <div class="progress" style="width: {{kendall}}%;"></div>
+            </div>
+            <span class="Value">{{kendall}}%</span>
+        </div>
+    </div>
+    
+</body>
+<div class="graphdiv">
+    <h2 class = "graphtitle">{{tickertext}}    {{statetext}}</h2>
+    <img class = "graphimage" src="{{graphimage}}" alt="no image found">
+</div>
+<div class="loader" id="loader">
+    <span></span>
+    
+</div>
+<script>
+    document.onreadystatechange = function() {
+        if (document.readyState !== "complete") {
+            document.querySelector(
+                "#containerelement").style.visibility = "hidden";
+            document.querySelector(
+                "#loader").style.opacity = "0";
+        } else {
+            document.querySelector(
+                "#loader").style.opacity = "1";
+            document.querySelector(
+                "#containerelemenet").style.visibility = "visible";
+        }
+    };
+</script>
+</html>
