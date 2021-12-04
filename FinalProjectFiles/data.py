@@ -26,6 +26,8 @@ def getGraph(stock, state):
 
 def plotData(c, d, state, ticker):
     plt.plot(c, d, 'ro')
+    plt.xlabel('cases')
+    plt.ylabel('stock price')
     plt.savefig("graph_files/" + str(ticker) + "-" + str(state) + ".png")
     plt.close();
 
